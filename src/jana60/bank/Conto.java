@@ -4,7 +4,7 @@ public class Conto {
 
 	private int number;
 	private int balance;
-	public String owner;
+	private String owner;
 	
 	public Conto(int number, int balance, String owner) {
 		
@@ -33,26 +33,39 @@ public class Conto {
 		this.owner = owner;
 	}
 	
-	public int addMoney(int addedMoney) {
+	public void addMoney(int addedMoney) {
 		
-		return balance += addedMoney;
+		balance += addedMoney;
 	}
 	
-	public void getMoney(int takenMoney) {
+//	public void getMoney(int takenMoney) {
+//		
+//		if (balance - takenMoney >= 0) {
+//			
+//			balance -= takenMoney;	
+//		} else {
+//			
+//			return;
+//		}
+//	}
+	
+	public boolean getMoney(int money) {
 		
-		if (balance - takenMoney >= 0) {
+		if (balance < money) {
 			
-			balance -= takenMoney;	
+			return false;
 		} else {
 			
-			return;
+			balance -= money;
+			
+			return true;
 		}
 	}
 	
-	public int getSaldo() {
-		
-		return balance;
-	}
+//	public int getSaldo() {
+//		
+//		return balance;
+//	}
 	
 	
 	

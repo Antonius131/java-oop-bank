@@ -7,9 +7,8 @@ public class Main {
 		Conto cnt = new Conto(1234, 0 , "Antonio Mendetta");
 		
 		cnt.addMoney(1000);
-		cnt.getMoney(999);
-		cnt.getSaldo();
 		
+		System.out.println(cnt.getMoney(1200));
 		System.out.println(cnt);
 	}
 }
